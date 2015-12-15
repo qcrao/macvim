@@ -6,4 +6,4 @@ mac 专用vim配置，支持c, golang, python
 
 ##效果展示
 
-![mac vim](http://i4.tietuku.com/9b4fbb655a236766.jpg "macvim")
+![mac vim](http://i4.tietuku.com/3556be472f2905a7.jpg "macvim")
