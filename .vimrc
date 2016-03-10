@@ -65,7 +65,8 @@ set fileformat=unix
 
 set background=dark
 let g:rehash256 = 1
-colorscheme mycolor
+"colorscheme mycolor
+colorscheme molokai
 " gui settings
 if has("gui_running")
     set guioptions-=T " no toolbar
@@ -80,8 +81,20 @@ if has("gui_running")
 endif
 
 " vim-go
-syntax enable  
-filetype plugin on  
+"syntax enable  
+"filetype plugin on  
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 0
+let g:go_fmt_autosave = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -210,7 +223,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
    
-let g:pydiction_location='~/.vim/tools/pydiction/complete-dict'  
+" let g:pydiction_location='~/.vim/tools/pydiction/complete-dict'  
 
 " nerdtree
 " autocmd vimenter * NERDTree
@@ -231,10 +244,7 @@ nmap <F9> :!ctags -R --c-kinds=+cdefgmnpstuv --c++-kinds=+cdefgmnpstuv --fields=
 "nmap <F9> :!ctags -R --c-kinds=+cdefgmnpstuv --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>:TlistUpdate<CR>
 nmap <F10> :!cscope -Rbkq<cr><cr>
 set tags=./tags
-autocmd BufRead,BufNewFile *.py set tags+=/Users/zhangzhen/anaconda/lib/python2.7/site-packages/tags
 autocmd FileType c set tags+=/usr/include/tags
-autocmd FileType go set tags+=$GOPATH/src/tags
-autocmd FileType go set tags+=$GOROOT/src/tags
 "set autochdir
 
 " cscope
