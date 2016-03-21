@@ -4,7 +4,7 @@ mac 专用vim配置，支持c, golang, python
 
 #安装
 * cp macvim/.vimrc macvim/.vim ~/ 
-* cp macvim/Golang/* $GOPATH/src 
+* cp macvim/Golang/* $GOPATH/src/
 
 打开vim
 * :BundleInstall
