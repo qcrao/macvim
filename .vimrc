@@ -288,9 +288,9 @@ if has("cscope")
 endif
 
 "paste
-vmap <C-c> "+y
-nmap <C-v> "+p
-set pastetoggle=<F12>
+"vmap <C-c> "+y
+"nmap <C-v> "+p
+"set pastetoggle=<F12>
 
 
 set t_CO=256 "如果是在模拟终端需要把颜色设置成256色
